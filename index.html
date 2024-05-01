@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* bento-grid */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+}
+
+.bento-row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+}
+
+.bento-col-4 {
+  grid-column: span 4;
+}
+
+.bento-col-6 {
+  grid-column: span 6;
+}
+
+.bento-col-12 {
+  grid-column: span 12;
+}
+
+.bento-box {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+    <!-- bento grid layout -->
+    <div class="bento-grid">
+        <div class="bento-row">
+            <div class="bento-col-4">
+                <div class="bento-box">
+                    <h1>Box 1</h1>
+                </div>
+            </div>
+            <div class="bento-col-4">
+                <div class="bento-box">
+                    <h1>Box 2</h1>
+                </div>
+            </div>
+            <div class="bento-col-4">
+                <div class="bento-box">
+                    <h1>Box 3</h1>
+                </div>
+            </div>
+        </div>
+        <div class="bento-row">
+            <div class="bento-col-6">
+                <div class="bento-box">
+                    <h1>Box 4</h1>
+                </div>
+            </div>
+            <div class="bento-col-6">
+                <div class="bento-box">
+                    <h1>Box 5</h1>
+                </div>
+            </div>
+        </div>
+        <div class="bento-row">
+            <div class="bento-col-12">
+                <div class="bento-box">
+                    <h1>Box 6</h1>
+                </div>
+            </div>
+        </div>
+    
+</body>
+</html>
