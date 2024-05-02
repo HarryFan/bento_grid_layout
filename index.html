@@ -6,76 +6,37 @@
     <title>Document</title>
     <style>
       /* bento-grid */
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 20px;
+.grid{
+    display: grid;
+    grid-template-rows:repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap:1.25rem;
+    padding:1.25rem;
+    grid-auto-flow:dense;
+}
+.img-1x1{
+/* items implicitly take one row and one column */
+
 }
 
-.bento-row {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 20px;
+.img-2x1{
+    grid-row-end: span 1;
+    grid-column-end: span 2;
 }
-
-.bento-col-4 {
-  grid-column: span 4;
-}
-
-.bento-col-6 {
-  grid-column: span 6;
-}
-
-.bento-col-12 {
-  grid-column: span 12;
-}
-
-.bento-box {
-  background-color: #f2f2f2;
-  padding: 20px;
-  text-align: center;
+.img-2x2{
+    grid-row-end:span 2;
+    grid-column-end:span 2;
 }
     </style>
 </head>
 <body>
     <!-- bento grid layout -->
-    <div class="bento-grid">
-        <div class="bento-row">
-            <div class="bento-col-4">
-                <div class="bento-box">
-                    <h1>Box 1</h1>
-                </div>
-            </div>
-            <div class="bento-col-4">
-                <div class="bento-box">
-                    <h1>Box 2</h1>
-                </div>
-            </div>
-            <div class="bento-col-4">
-                <div class="bento-box">
-                    <h1>Box 3</h1>
-                </div>
-            </div>
-        </div>
-        <div class="bento-row">
-            <div class="bento-col-6">
-                <div class="bento-box">
-                    <h1>Box 4</h1>
-                </div>
-            </div>
-            <div class="bento-col-6">
-                <div class="bento-box">
-                    <h1>Box 5</h1>
-                </div>
-            </div>
-        </div>
-        <div class="bento-row">
-            <div class="bento-col-12">
-                <div class="bento-box">
-                    <h1>Box 6</h1>
-                </div>
-            </div>
-        </div>
+<div class="grid">
+    <img src="https://via.placeholder.com/300x300" alt="banner" class="img-2x2">
+    <img src="https://via.placeholder.com/300x300" alt="banner" class="img-1x1">
+    <img src="https://via.placeholder.com/300x300" alt="banner" class="img-1x1">
+    <img src="https://via.placeholder.com/600x300" alt="banner" class="img-2x1">
     
+  
 </body>
 </html>
