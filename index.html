@@ -1,42 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>便當網格佈局範例</title>
     <style>
-      /* bento-grid */
-.grid{
-    display: grid;
-    grid-template-rows:repeat(4, 1fr);
-    grid-template-columns: repeat(4, 1fr);
-    gap:1.25rem;
-    padding:1.25rem;
-    grid-auto-flow:dense;
-}
-.img-1x1{
-/* items implicitly take one row and one column */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
 
-}
-
-.img-2x1{
-    grid-row-end: span 1;
-    grid-column-end: span 2;
-}
-.img-2x2{
-    grid-row-end:span 2;
-    grid-column-end:span 2;
-}
+        .bento-item {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
+
 <body>
-    <!-- bento grid layout -->
-<div class="grid">
-    <img src="https://via.placeholder.com/300x300" alt="banner" class="img-2x2">
-    <img src="https://via.placeholder.com/300x300" alt="banner" class="img-1x1">
-    <img src="https://via.placeholder.com/300x300" alt="banner" class="img-1x1">
-    <img src="https://via.placeholder.com/600x300" alt="banner" class="img-2x1">
-    
-  
+    <div class="bento-grid">
+        <div class="bento-item">項目 1</div>
+        <div class="bento-item">項目 2</div>
+        <div class="bento-item">項目 3</div>
+        <div class="bento-item">項目 4</div>
+        <div class="bento-item">項目 5</div>
+        <div class="bento-item">項目 6</div>
+        <div class="bento-item">項目 7</div>
+        <div class="bento-item">項目 8</div>
+        <div class="bento-item">項目 9</div>
+        <div class="bento-item">項目 10</div>
+    </div>
 </body>
+
 </html>
